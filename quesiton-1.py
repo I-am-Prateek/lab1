@@ -19,8 +19,8 @@ else:
     print("You have entered",month,"/",day,"/",year)
 
 if(month==1, month==5,month==7, month==8, month==10, month==12 ):
-    if(30>day<32):
-        print("You have entered",month,"/",day,"/",year)
+   if(30>day<32):
+    print("You have entered",month,"/",day,"/",year)
 else:
     print("Invalid Month And Day")       
 

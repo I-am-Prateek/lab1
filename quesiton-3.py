@@ -8,51 +8,53 @@ UK=45423
 #taking input from the user
 
 current_salary=float(input("What is your current salary in EUR?\n"))
-secondcountry=input("which country you want to migrate?\n").upper().lower()
-if(secondcountry=="canada" or secondcountry=="United_States" or secondcountry=="Cambodia" or secondcountry=="United_Kingdom"):
+secondcountry=input("which country you want to migrate?\n").lower()
+if(secondcountry=="canada" or secondcountry=="US" or secondcountry=="Cambodia" or secondcountry=="UK"):
      print()
 else:
       print("Wrong Country Input")
 
 def pay_conversion(current_salary, secondcountry):
   if(secondcountry=="canada"):
-    current_salary=current_salary*0.67
-  elif(secondcountry=="United_States"):
-    current_salary=current_salary*0.90
+    current_salary=current_salary*1.49
+  elif(secondcountry=="US"):
+    current_salary=current_salary*1.10
   elif(secondcountry=="Cambodia"):
-    current_salary=current_salary/4522.59
-  elif(secondcountry=="United_Kingdom"):
-    current_salary=current_salary/1.16
+    current_salary=current_salary*4522.59
+  elif(secondcountry=="UK"):
+    current_salary=current_salary*0.86
 
   return current_salary
+
+
+sal=pay_conversion(current_salary, secondcountry)
+
 if(secondcountry=="canada"):
     print()
-    if(current_salary>CAD):
-       print("You will be rich in Canada with a salary of $",current_salary,)
+    if(sal>CAD):
+       print("You will be rich in Canada with a salary of $",sal,)
     else:
-       print("You will be poor in Canada with a salary of $",current_salary,)
-elif(secondcountry=="United_States"):
+       print("You will be poor in Canada with a salary of $",sal,)
+elif(secondcountry=="US"):
     print()
-    if(current_salary>USA):
-        print("You will be rich in USA with a salary of $",current_salary,)
+    if(sal>USA):
+        print("You will be rich in USA with a salary of $",sal,)
     else:
-        print("You will be poor in USA with a salary of $",current_salary,)
+        print("You will be poor in USA with a salary of $",sal,)
 elif(secondcountry=="Cambodia"):
     print()
-    if(current_salary>COM):
-        print("You will be rich in Cambodia with a salary of",current_salary,"KHR")
+    if(sal>COM):
+        print("You will be rich in Cambodia with a salary of",sal,"KHR")
     else:
-        print("You will be poor in Cambodia with a salary of ",current_salary,"KHR")
-elif(secondcountry=="United_Kingdom"):
+        print("You will be poor in Cambodia with a salary of ",sal,"KHR")
+elif(secondcountry=="UK"):
     print()
-    if(current_salary>UK):
-        print("You will be rich in UK with a salary of £",current_salary,)
+    if(sal>UK):
+        print("You will be rich in UK with a salary of £",sal,)
     else:
-        print("You will be poor in UK with a salary of £",current_salary,)
+        print("You will be poor in UK with a salary of £",sal,)
 else:
     print("Wrong Country Input")
-
-pay_conversion(current_salary, secondcountry)
 
  
 
